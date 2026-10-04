@@ -4,862 +4,830 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sejal Yenage | Civil & Structural Engineering</title>
+<title>Sejal Yenage | Structural & Computational Engineering</title>
 
 <meta name="description"
-content="Portfolio of Sejal Yenage, Civil and Infrastructure Engineering student at IIT Jodhpur working in structural engineering, computational mechanics, finite element analysis and machine learning.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+content="Portfolio of Sejal Yenage, Civil & Infrastructure Engineering student at IIT Jodhpur, working in structural engineering, computational mechanics, finite element analysis and machine learning.">
 
 <style>
 
-/* =========================
-   GLOBAL
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
-:root {
-    --navy: #102a43;
-    --blue: #2563eb;
-    --blue-light: #eaf2ff;
-    --text: #172033;
-    --muted: #607086;
-    --light: #f7f9fc;
-    --white: #ffffff;
-    --border: #dce3ec;
-    --accent: #3b82f6;
-    --shadow: 0 12px 35px rgba(16,42,67,0.08);
+:root{
+    --navy:#17283b;
+    --blue:#315d7a;
+    --light-blue:#eaf1f5;
+    --cream:#f7f6f2;
+    --white:#ffffff;
+    --text:#24313d;
+    --muted:#687581;
+    --line:#d8dee3;
+    --accent:#8aa9bd;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "DM Sans", sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.65;
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.65;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-.container {
-    width: min(1120px, 90%);
-    margin: auto;
+.container{
+    width:min(1180px,90%);
+    margin:auto;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(220,227,236,0.8);
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(247,246,242,0.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(216,222,227,0.8);
 }
 
-.nav-inner {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.nav-inner{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.logo {
-    font-family: "Playfair Display", serif;
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: var(--navy);
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    color:var(--navy);
 }
 
-.nav-links {
-    display: flex;
-    gap: 26px;
-    align-items: center;
+.nav-links{
+    display:flex;
+    gap:30px;
+    font-size:14px;
+    color:var(--muted);
 }
 
-.nav-links a {
-    font-size: 0.9rem;
-    color: var(--muted);
-    font-weight: 500;
-    transition: 0.25s;
+.nav-links a{
+    transition:.25s;
 }
 
-.nav-links a:hover {
-    color: var(--blue);
+.nav-links a:hover{
+    color:var(--blue);
 }
 
-.nav-button {
-    padding: 9px 17px;
-    border-radius: 8px;
-    background: var(--navy);
-    color: white !important;
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:70px;
+    padding:90px 0 100px;
 }
 
-.nav-button:hover {
-    background: var(--blue);
+.eyebrow{
+    color:var(--blue);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
 }
 
-/* =========================
-   HERO
-========================= */
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(52px,7vw,88px);
+    line-height:1.02;
+    color:var(--navy);
+    font-weight:500;
+    letter-spacing:-2px;
+}
 
-.hero {
-    min-height: 100vh;
-    padding-top: 150px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+.hero h1 span{
+    color:var(--blue);
+}
+
+.hero-text{
+    margin-top:28px;
+    max-width:650px;
+    font-size:19px;
+    color:var(--muted);
+}
+
+.hero-meta{
+    margin-top:35px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    border:1px solid var(--line);
+    background:white;
+    padding:8px 13px;
+    border-radius:100px;
+    font-size:12px;
+    color:var(--blue);
+}
+
+.hero-buttons{
+    margin-top:38px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:13px 22px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--navy);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:var(--blue);
+}
+
+.btn-secondary{
+    border:1px solid var(--line);
+    background:white;
+    color:var(--navy);
+}
+
+.btn-secondary:hover{
+    border-color:var(--blue);
+}
+
+/* HERO IMAGE */
+
+.hero-visual{
+    position:relative;
+}
+
+.hero-photo{
+    height:570px;
+    border-radius:8px;
     background:
-        radial-gradient(circle at 85% 25%, rgba(59,130,246,0.10), transparent 28%),
-        radial-gradient(circle at 10% 80%, rgba(37,99,235,0.06), transparent 25%);
+        linear-gradient(145deg,#dbe6ec,#eef2f3);
+    overflow:hidden;
+    position:relative;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 70px;
-    align-items: center;
+.hero-photo::after{
+    content:"YOUR PHOTO";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#8a9aa5;
+    letter-spacing:3px;
+    font-size:13px;
 }
 
-.eyebrow {
-    color: var(--blue);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
+.hero-caption{
+    position:absolute;
+    bottom:-22px;
+    left:-25px;
+    background:white;
+    padding:18px 22px;
+    box-shadow:0 12px 35px rgba(23,40,59,.10);
+    max-width:250px;
+    font-size:13px;
+    color:var(--muted);
 }
 
-.hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(3.4rem, 7vw, 6.2rem);
-    line-height: 0.98;
-    color: var(--navy);
-    margin-bottom: 25px;
+.hero-caption strong{
+    display:block;
+    color:var(--navy);
+    margin-bottom:3px;
 }
 
-.hero h1 span {
-    color: var(--blue);
-}
-
-.hero-description {
-    max-width: 670px;
-    font-size: 1.12rem;
-    color: var(--muted);
-    margin-bottom: 30px;
-}
+/* SECTION */
 
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 35px;
+section{
+    padding:105px 0;
 }
 
-.tag {
-    padding: 7px 13px;
-    border: 1px solid var(--border);
-    border-radius: 30px;
-    background: white;
-    font-size: 0.8rem;
-    color: var(--muted);
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:48px;
+    gap:30px;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 13px;
-    flex-wrap: wrap;
+.section-number{
+    color:var(--accent);
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:700;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 21px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: 0.25s;
+.section-title{
+    font-family:'Playfair Display',serif;
+    font-size:46px;
+    font-weight:500;
+    color:var(--navy);
+    margin-top:8px;
 }
 
-.btn-primary {
-    background: var(--navy);
-    color: white;
+.section-intro{
+    max-width:470px;
+    color:var(--muted);
+    font-size:15px;
 }
 
-.btn-primary:hover {
-    background: var(--blue);
-    transform: translateY(-2px);
-}
+/* ABOUT */
 
-.btn-secondary {
-    border: 1px solid var(--border);
-    color: var(--navy);
-    background: white;
+.about{
+    background:white;
 }
 
-.btn-secondary:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
 }
 
-/* Engineering visual */
-
-.hero-visual {
-    position: relative;
-    height: 430px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.about-text{
+    font-size:18px;
+    color:var(--muted);
 }
 
-.engineering-card {
-    width: 330px;
-    height: 330px;
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    background: linear-gradient(145deg,#ffffff,#f3f7fc);
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
+.about-text p + p{
+    margin-top:18px;
 }
 
-.engineering-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(37,99,235,0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(37,99,235,0.08) 1px, transparent 1px);
-    background-size: 28px 28px;
+.highlight{
+    color:var(--navy);
+    font-weight:600;
 }
 
-.section-ring {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    border: 3px solid var(--blue);
-    border-radius: 50%;
-    left: 83px;
-    top: 75px;
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
 }
 
-.section-ring::after {
-    content: "";
-    position: absolute;
-    width: 92px;
-    height: 92px;
-    border: 2px dashed var(--navy);
-    border-radius: 50%;
-    left: 31px;
-    top: 31px;
+.stat{
+    padding:25px;
+    background:var(--cream);
+    border:1px solid var(--line);
 }
 
-.beam {
-    position: absolute;
-    width: 230px;
-    height: 5px;
-    background: var(--navy);
-    transform: rotate(-28deg);
-    left: 50px;
-    top: 220px;
+.stat-number{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    color:var(--navy);
 }
 
-.node {
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: var(--blue);
+.stat-label{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:4px;
 }
 
-.node.n1 { left: 54px; top: 263px; }
-.node.n2 { left: 270px; top: 148px; }
+/* RESEARCH */
 
-.visual-label {
-    position: absolute;
-    bottom: 28px;
-    left: 30px;
-    font-size: 0.7rem;
-    color: var(--muted);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+.research-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
 }
-
-/* =========================
-   SECTIONS
-========================= */
 
-section {
-    padding: 105px 0;
+.research-card{
+    background:white;
+    padding:34px;
+    border:1px solid var(--line);
+    transition:.3s;
 }
 
-.section-light {
-    background: var(--light);
+.research-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(23,40,59,.08);
 }
 
-.section-heading {
-    margin-bottom: 50px;
+.research-card .number{
+    color:var(--accent);
+    font-size:13px;
+    font-weight:700;
 }
 
-.section-number {
-    font-size: 0.78rem;
-    color: var(--blue);
-    font-weight: 700;
-    letter-spacing: 2px;
+.research-card h3{
+    margin:16px 0 12px;
+    color:var(--navy);
+    font-size:22px;
 }
 
-.section-heading h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 2.65rem;
-    color: var(--navy);
-    margin: 6px 0 12px;
+.research-card p{
+    color:var(--muted);
+    font-size:14px;
 }
 
-.section-heading p {
-    color: var(--muted);
-    max-width: 680px;
+.research-tools{
+    margin-top:20px;
+    color:var(--blue);
+    font-size:12px;
+    font-weight:600;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* PROJECTS */
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
+.projects{
+    background:white;
 }
 
-.about-text p {
-    margin-bottom: 18px;
-    color: var(--muted);
+.project{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:420px;
+    margin-bottom:25px;
+    border:1px solid var(--line);
+    background:var(--cream);
 }
 
-.stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.project:nth-child(even){
+    direction:rtl;
 }
 
-.stat {
-    padding: 25px;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: white;
+.project:nth-child(even) .project-content{
+    direction:ltr;
 }
 
-.stat strong {
-    display: block;
-    font-size: 1.8rem;
-    color: var(--navy);
-    margin-bottom: 3px;
+.project-image{
+    min-height:420px;
+    background:linear-gradient(145deg,#dbe6ec,#f0f2f1);
+    position:relative;
+    overflow:hidden;
 }
 
-.stat span {
-    font-size: 0.78rem;
-    color: var(--muted);
+.project-image::after{
+    content:"PROJECT IMAGE";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#8797a2;
+    letter-spacing:2px;
+    font-size:12px;
 }
 
-/* =========================
-   EXPERIENCE
-========================= */
-
-.timeline {
-    position: relative;
-    margin-left: 8px;
+.project-content{
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 10px;
-    bottom: 10px;
-    width: 1px;
-    background: var(--border);
+.project-number{
+    color:var(--accent);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
 }
 
-.timeline-item {
-    position: relative;
-    padding-left: 38px;
-    margin-bottom: 45px;
+.project h3{
+    font-family:'Playfair Display',serif;
+    font-size:31px;
+    font-weight:500;
+    color:var(--navy);
+    margin:13px 0;
 }
 
-.timeline-dot {
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 11px;
-    height: 11px;
-    background: var(--blue);
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px var(--blue-light);
+.project p{
+    color:var(--muted);
+    font-size:14px;
 }
 
-.timeline-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 5px;
+.project-tech{
+    margin-top:20px;
+    font-size:12px;
+    color:var(--blue);
+    font-weight:600;
 }
 
-.timeline-title {
-    font-weight: 700;
-    color: var(--navy);
-}
+/* EXPERIENCE */
 
-.timeline-date {
-    font-size: 0.78rem;
-    color: var(--blue);
-    white-space: nowrap;
+.timeline{
+    border-left:1px solid var(--line);
+    margin-left:8px;
 }
 
-.timeline-subtitle {
-    color: var(--muted);
-    font-size: 0.88rem;
-    margin-bottom: 10px;
+.timeline-item{
+    padding:0 0 48px 38px;
+    position:relative;
 }
 
-.timeline-item ul {
-    padding-left: 19px;
-    color: var(--muted);
-    font-size: 0.91rem;
+.timeline-item::before{
+    content:"";
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--blue);
+    position:absolute;
+    left:-5px;
+    top:7px;
 }
 
-.timeline-item li {
-    margin-bottom: 5px;
+.timeline-date{
+    color:var(--accent);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 22px;
+.timeline h3{
+    margin:7px 0 2px;
+    color:var(--navy);
+    font-size:20px;
 }
 
-.project-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 17px;
-    padding: 28px;
-    transition: 0.3s;
-    position: relative;
-    overflow: hidden;
+.timeline h4{
+    color:var(--blue);
+    font-size:14px;
+    font-weight:500;
+    margin-bottom:10px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
-    border-color: #bfd2f5;
+.timeline p{
+    max-width:750px;
+    color:var(--muted);
+    font-size:14px;
 }
 
-.project-number {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--blue);
-    letter-spacing: 1px;
-}
+/* PUBLICATION */
 
-.project-card h3 {
-    font-size: 1.12rem;
-    color: var(--navy);
-    margin: 9px 0 9px;
+.publication{
+    background:var(--navy);
+    color:white;
 }
 
-.project-card p {
-    color: var(--muted);
-    font-size: 0.87rem;
-    margin-bottom: 17px;
+.publication .section-number{
+    color:#9db7c7;
 }
 
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
+.publication .section-title{
+    color:white;
 }
 
-.project-tags span {
-    background: var(--blue-light);
-    color: var(--navy);
-    padding: 4px 9px;
-    border-radius: 5px;
-    font-size: 0.68rem;
+.paper{
+    border-top:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.25);
+    padding:35px 0;
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:40px;
 }
 
-/* =========================
-   PUBLICATION
-========================= */
-
-.publication {
-    border-left: 3px solid var(--blue);
-    padding: 27px 30px;
-    background: white;
-    border-radius: 0 13px 13px 0;
-    box-shadow: var(--shadow);
+.paper-label{
+    color:#9db7c7;
+    font-size:12px;
+    letter-spacing:1px;
+    font-weight:700;
 }
 
-.publication h3 {
-    color: var(--navy);
-    font-size: 1.15rem;
-    margin-bottom: 8px;
+.paper h3{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    font-weight:500;
+    line-height:1.3;
 }
 
-.publication p {
-    color: var(--muted);
-    font-size: 0.87rem;
+.paper p{
+    margin-top:12px;
+    color:#c5d0d8;
+    font-size:14px;
 }
 
-.publication-meta {
-    margin-top: 13px;
-    color: var(--blue);
-    font-size: 0.78rem;
-    font-weight: 600;
+.paper a{
+    display:inline-block;
+    margin-top:18px;
+    color:white;
+    border-bottom:1px solid #9db7c7;
+    padding-bottom:2px;
+    font-size:13px;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.skill-box {
-    padding: 25px;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: white;
+.skill-card{
+    border-top:2px solid var(--navy);
+    padding:25px 5px;
 }
 
-.skill-box h3 {
-    font-size: 1rem;
-    color: var(--navy);
-    margin-bottom: 13px;
+.skill-card h3{
+    color:var(--navy);
+    margin-bottom:12px;
+    font-size:17px;
 }
 
-.skill-box p {
-    font-size: 0.83rem;
-    color: var(--muted);
+.skill-card p{
+    color:var(--muted);
+    font-size:14px;
 }
-
-/* =========================
-   LEADERSHIP
-========================= */
 
-.leadership-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
+/* SOCIAL */
 
-.leadership-card {
-    border: 1px solid var(--border);
-    padding: 25px;
-    border-radius: 14px;
-    background: white;
+.social{
+    background:white;
 }
 
-.leadership-card h3 {
-    color: var(--navy);
-    font-size: 1rem;
+.social-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
-.leadership-card .role {
-    color: var(--blue);
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin: 4px 0 9px;
+.social-photo{
+    height:400px;
+    background:linear-gradient(145deg,#dfe9e3,#f2f4f1);
+    position:relative;
 }
 
-.leadership-card p {
-    color: var(--muted);
-    font-size: 0.83rem;
+.social-photo::after{
+    content:"ADD PHOTOGRAPH";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#89978f;
+    font-size:12px;
+    letter-spacing:2px;
 }
-
-/* =========================
-   CONTACT
-========================= */
 
-.contact {
-    background: var(--navy);
-    color: white;
+.social-text h3{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    color:var(--navy);
+    margin:10px 0 20px;
 }
 
-.contact .section-number {
-    color: #8db8ff;
+.social-text p{
+    color:var(--muted);
+    font-size:15px;
 }
 
-.contact h2 {
-    color: white;
+.social-role{
+    color:var(--blue);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
 }
 
-.contact p {
-    color: #b8c6d8;
-}
+/* CONTACT */
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
+.contact{
+    text-align:center;
+    padding:120px 0;
 }
 
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
+.contact h2{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    font-weight:500;
+    color:var(--navy);
 }
 
-.contact-link {
-    color: #d8e4f2;
-    font-size: 0.9rem;
-    transition: 0.2s;
+.contact p{
+    max-width:550px;
+    margin:20px auto 30px;
+    color:var(--muted);
 }
 
-.contact-link:hover {
-    color: #8db8ff;
+.contact-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
-.contact-message {
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 15px;
-    background: rgba(255,255,255,0.05);
+.contact-links a{
+    color:var(--blue);
+    font-weight:600;
+    font-size:14px;
 }
 
-.contact-message h3 {
-    margin-bottom: 8px;
-}
+/* FOOTER */
 
-.contact-message p {
-    font-size: 0.87rem;
+footer{
+    border-top:1px solid var(--line);
+    padding:25px 0;
+    color:var(--muted);
+    font-size:12px;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
-footer {
-    background: #0b2033;
-    color: #8ea1b7;
-    padding: 24px 0;
-    text-align: center;
-    font-size: 0.75rem;
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* RESPONSIVE */
 
-@media(max-width: 850px) {
+@media(max-width:850px){
 
-    .nav-links {
-        display: none;
+    .nav-links{
+        display:none;
     }
 
-    .hero {
-        padding-top: 120px;
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:60px;
     }
 
-    .hero-grid,
+    .hero-photo{
+        height:400px;
+    }
+
     .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .research-grid,
+    .project,
+    .social-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero-visual {
-        display: none;
+    .project:nth-child(even){
+        direction:ltr;
     }
 
-    .project-grid,
-    .leadership-grid {
-        grid-template-columns: 1fr;
+    .project-image{
+        min-height:280px;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
+    .skills-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .timeline-top {
-        flex-direction: column;
-        gap: 2px;
+    .paper{
+        grid-template-columns:1fr;
+        gap:10px;
     }
 
-    .hero h1 {
-        font-size: 3.7rem;
+    .section-title{
+        font-size:38px;
+    }
+
+    .contact h2{
+        font-size:43px;
     }
 }
 
-@media(max-width: 550px) {
+@media(max-width:550px){
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .hero h1{
+        font-size:52px;
     }
 
-    .stats {
-        grid-template-columns: 1fr;
+    .skills-grid{
+        grid-template-columns:1fr;
     }
 
-    section {
-        padding: 75px 0;
+    .stats{
+        grid-template-columns:1fr;
     }
 
-    .section-heading h2 {
-        font-size: 2.2rem;
+    .project-content{
+        padding:30px;
     }
 
-    .hero h1 {
-        font-size: 3.1rem;
-    }
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 <div class="container nav-inner">
 
-<a href="#home" class="logo">SY.</a>
+    <div class="logo">SY.</div>
 
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#experience">Research</a>
-<a href="#projects">Projects</a>
-<a href="#publication">Publication</a>
-<a href="#skills">Skills</a>
-<a href="#leadership">Leadership</a>
-<a href="#contact" class="nav-button">Contact</a>
-</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#publication">Publication</a>
+        <a href="#contact">Contact</a>
+    </div>
 
 </div>
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
-<section class="hero" id="home">
-
-<div class="container hero-grid">
+<header class="container hero">
 
 <div>
 
-<div class="eyebrow">
-Civil & Infrastructure Engineering
-</div>
+    <div class="eyebrow">
+        Civil & Infrastructure Engineering · IIT Jodhpur
+    </div>
 
-<h1>
-Sejal<br>
-<span>Yenage</span>
-</h1>
+    <h1>
+        Sejal<br>
+        <span>Yenage.</span>
+    </h1>
 
-<p class="hero-description">
-B.Tech student at the Indian Institute of Technology Jodhpur, working at the intersection of
-<strong>structural engineering, computational mechanics, finite element analysis, and machine learning.</strong>
-</p>
+    <p class="hero-text">
+        Engineering structures through computational mechanics,
+        finite element analysis, structural design, and data-driven
+        methods.
+    </p>
 
-<div class="hero-tags">
-<span class="tag">Structural Engineering</span>
-<span class="tag">Computational Mechanics</span>
-<span class="tag">Finite Element Analysis</span>
-<span class="tag">Machine Learning</span>
-</div>
+    <div class="hero-meta">
+        <span class="tag">Structural Engineering</span>
+        <span class="tag">Computational Mechanics</span>
+        <span class="tag">Finite Element Analysis</span>
+        <span class="tag">Machine Learning</span>
+    </div>
 
-<div class="hero-buttons">
+    <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+            Explore my work
+        </a>
 
-<a class="btn btn-primary"
-href="mailto:sejalyenage7@gmail.com">
-Get in Touch
-</a>
-
-<a class="btn btn-secondary"
-href="https://github.com/sejal-010605"
-target="_blank">
-GitHub
-</a>
-
-<a class="btn btn-secondary"
-href="https://www.linkedin.com/in/sejalvy2407"
-target="_blank">
-LinkedIn
-</a>
-
-</div>
+        <a href="https://github.com/sejal-010605"
+           target="_blank"
+           class="btn btn-secondary">
+            GitHub ↗
+        </a>
+    </div>
 
 </div>
 
 
 <div class="hero-visual">
 
-<div class="engineering-card">
+    <!-- REPLACE THIS DIV WITH YOUR OWN PHOTO -->
 
-<div class="section-ring"></div>
+    <div class="hero-photo"></div>
 
-<div class="beam"></div>
-
-<div class="node n1"></div>
-<div class="node n2"></div>
-
-<div class="visual-label">
-Structural • Computational • Data
-</div>
+    <div class="hero-caption">
+        <strong>Structural Engineering</strong>
+        Research, modelling and computational analysis.
+    </div>
 
 </div>
 
-</div>
-
-</div>
-
-</section>
+</header>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
-<section id="about" class="section-light">
+<section id="about" class="about">
 
 <div class="container">
 
-<div class="section-heading">
-<div class="section-number">01 — ABOUT</div>
-<h2>Engineering with computation.</h2>
-<p>
-My work combines structural engineering fundamentals with numerical modelling,
-finite element analysis, automation, and data-driven methods.
+<div class="section-header">
+
+<div>
+<div class="section-number">01 / ABOUT</div>
+<div class="section-title">Building with curiosity.</div>
+</div>
+
+<p class="section-intro">
+I am interested in understanding how structures behave,
+and using computation to make structural engineering more
+accurate, efficient and intelligent.
 </p>
+
 </div>
 
 
@@ -868,20 +836,22 @@ finite element analysis, automation, and data-driven methods.
 <div class="about-text">
 
 <p>
-I am a Civil and Infrastructure Engineering student at
-<strong>Indian Institute of Technology Jodhpur</strong>, with a strong focus on
-structural engineering and computational methods.
+I am a <span class="highlight">Civil & Infrastructure Engineering
+student at IIT Jodhpur</span>, with a strong focus on structural
+engineering and computational methods.
 </p>
 
 <p>
-My research experience includes geometric imperfection modelling of
-Circular Hollow Sections, finite element modelling of bolted joints,
-automated simulation workflows, and machine-learning applications in engineering.
+My work spans finite element modelling, structural analysis,
+cold-formed steel, geometric imperfections, nonlinear analysis,
+and machine-learning-based engineering applications.
 </p>
 
 <p>
-I enjoy building computational tools that connect engineering mechanics,
-numerical simulation, and data-driven modelling to solve practical structural problems.
+I enjoy working at the intersection of
+<span class="highlight">mechanics, computation and structural design</span> —
+from developing numerical models to extracting meaningful
+engineering insights from simulations and data.
 </p>
 
 </div>
@@ -890,394 +860,412 @@ numerical simulation, and data-driven modelling to solve practical structural pr
 <div class="stats">
 
 <div class="stat">
-<strong>9.17/10</strong>
-<span>CGPA · Rank 1 in Department</span>
+<div class="stat-number">9.17/10</div>
+<div class="stat-label">CGPA · IIT Jodhpur</div>
 </div>
 
 <div class="stat">
-<strong>300+</strong>
-<span>Finite Element Models</span>
+<div class="stat-number">#1</div>
+<div class="stat-label">Departmental Rank</div>
 </div>
 
 <div class="stat">
-<strong>ABAQUS</strong>
-<span>FEA & Nonlinear Analysis</span>
+<div class="stat-number">FEA</div>
+<div class="stat-label">ABAQUS · Structural Modelling</div>
 </div>
 
 <div class="stat">
-<strong>Python</strong>
-<span>Engineering Automation & ML</span>
+<div class="stat-number">ML</div>
+<div class="stat-label">Data-driven Engineering</div>
 </div>
 
 </div>
 
 </div>
-
 </div>
 
 </section>
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- RESEARCH -->
 
-<section id="experience">
+<section id="research">
 
 <div class="container">
 
-<div class="section-heading">
-<div class="section-number">02 — RESEARCH & EXPERIENCE</div>
-<h2>Research experience.</h2>
-<p>
-Hands-on experience in computational mechanics, finite element modelling,
-structural analysis, and engineering automation.
+<div class="section-header">
+
+<div>
+<div class="section-number">02 / RESEARCH</div>
+<div class="section-title">Questions I like to investigate.</div>
+</div>
+
+<p class="section-intro">
+My research interests are centred around computational
+structural mechanics and the use of numerical and
+data-driven approaches to understand structural behaviour.
 </p>
-</div>
-
-
-<div class="timeline">
-
-
-<!-- NUS -->
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-top">
-
-<div class="timeline-title">
-Research Intern — NUS Singapore
-</div>
-
-<div class="timeline-date">
-June 2026 — Present
-</div>
-
-</div>
-
-<div class="timeline-subtitle">
-Dr. Meng Xin · Geometric Imperfection Modelling of CHS: ML and Extension to Additive Manufacturing
-</div>
-
-<ul>
-
-<li>
-Developed <strong>3D geometric imperfection models for Circular Hollow Sections (CHS)</strong>
-using mathematical formulations with controlled wave numbers, amplitude, and phase.
-</li>
-
-<li>
-Automated Python-based finite element modelling and
-<strong>Static Riks analysis</strong> workflows.
-</li>
-
-<li>
-Generated simulation datasets and trained
-<strong>Machine Learning models</strong>, extending the framework toward
-additively manufactured (3D-printed) materials.
-</li>
-
-</ul>
 
 </div>
 
 
-<!-- IIT BOMBAY -->
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-top">
-
-<div class="timeline-title">
-Research Intern — IIT Bombay
-</div>
-
-<div class="timeline-date">
-May 2025 — July 2025
-</div>
-
-</div>
-
-<div class="timeline-subtitle">
-Dr. Tushar Kanti Mandal · Finite Element Modelling of Bolted Joints
-</div>
-
-<ul>
-
-<li>
-Conducted a short-term computational study as part of a planned
-<strong>ISRO-associated project</strong>.
-</li>
-
-<li>
-Used <strong>ABAQUS</strong> for nonlinear contact modelling of bolted joints
-and analysed fatigue and loosening behaviour.
-</li>
-
-<li>
-Automated post-processing through Python scripting and investigated
-pitch difference and interference effects on fatigue life and anti-loosening performance.
-</li>
-
-</ul>
-
-</div>
+<div class="research-grid">
 
 
-<!-- CFS -->
+<div class="research-card">
 
-<div class="timeline-item">
+<div class="number">01</div>
 
-<div class="timeline-dot"></div>
+<h3>Geometric Imperfections</h3>
 
-<div class="timeline-top">
+<p>
+Development of mathematical imperfection models for
+Circular Hollow Sections, investigating controlled wave
+numbers, amplitudes and phase parameters.
+</p>
 
-<div class="timeline-title">
-Numerical Investigation of Cold-Formed Lipped C-Sections
-</div>
-
-<div class="timeline-date">
-2025
+<div class="research-tools">
+PYTHON · ABAQUS · NONLINEAR ANALYSIS
 </div>
 
 </div>
 
-<div class="timeline-subtitle">
-Research Project · Cold-formed steel structural behaviour
-</div>
 
-<ul>
+<div class="research-card">
 
-<li>
-Performed extensive ABAQUS modelling of edge-stiffened and perforated
-cold-formed steel channel sections.
-</li>
+<div class="number">02</div>
 
-<li>
-Investigated structural response and developed computational datasets
-for numerical evaluation.
-</li>
+<h3>Cold-Formed Steel</h3>
 
-</ul>
+<p>
+Numerical investigation of edge-stiffened perforated
+cold-formed steel channel sections and their structural
+response under compression.
+</p>
 
+<div class="research-tools">
+ABAQUS · CUFSM · STRUCTURAL BUCKLING
 </div>
 
 </div>
 
+
+<div class="research-card">
+
+<div class="number">03</div>
+
+<h3>Bolted Connections</h3>
+
+<p>
+Finite element modelling of bolted joints under static
+and dynamic loading, with emphasis on contact behaviour,
+fatigue and loosening response.
+</p>
+
+<div class="research-tools">
+ABAQUS · CONTACT MECHANICS · PYTHON
+</div>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="number">04</div>
+
+<h3>Data-Driven Engineering</h3>
+
+<p>
+Exploring machine learning approaches for engineering
+prediction problems and developing datasets from
+computational simulations.
+</p>
+
+<div class="research-tools">
+PYTHON · MACHINE LEARNING · DATA ANALYSIS
+</div>
+
+</div>
+
+
+</div>
 </div>
 
 </section>
 
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- PROJECTS -->
 
-<section id="projects" class="section-light">
+<section id="projects" class="projects">
 
 <div class="container">
 
-<div class="section-heading">
-<div class="section-number">03 — SELECTED PROJECTS</div>
-<h2>Selected work.</h2>
-<p>
-A selection of computational, structural, BIM, and machine-learning projects.
+<div class="section-header">
+
+<div>
+<div class="section-number">03 / SELECTED PROJECTS</div>
+<div class="section-title">From equations to models.</div>
+</div>
+
+<p class="section-intro">
+A selection of computational, structural and
+data-driven engineering projects.
 </p>
+
 </div>
 
 
-<div class="project-grid">
+<!-- PROJECT 1 -->
 
+<div class="project">
 
-<div class="project-card">
+<div class="project-image">
+    <!-- ADD IMAGE HERE -->
+</div>
 
-<div class="project-number">01 / COMPUTATIONAL MECHANICS</div>
+<div class="project-content">
+
+<div class="project-number">PROJECT 01</div>
 
 <h3>
 Geometric Imperfection Modelling of CHS
 </h3>
 
 <p>
-Developed parameterised 3D geometric imperfection models for Circular Hollow
-Sections using controlled circumferential and longitudinal wave numbers,
-amplitude, and phase.
+Developed a computational framework to generate
+controlled geometric imperfection shapes for Circular
+Hollow Sections by varying wave numbers, amplitudes
+and phase.
 </p>
 
-<div class="project-tags">
-<span>Python</span>
-<span>ABAQUS</span>
-<span>Static Riks</span>
-<span>CHS</span>
+<div class="project-tech">
+PYTHON · ABAQUS · RIKS ANALYSIS · COMPUTATIONAL MECHANICS
 </div>
 
 </div>
 
+</div>
 
-<div class="project-card">
 
-<div class="project-number">02 / COLD-FORMED STEEL</div>
+<!-- PROJECT 2 -->
+
+<div class="project">
+
+<div class="project-image">
+    <!-- ADD IMAGE HERE -->
+</div>
+
+<div class="project-content">
+
+<div class="project-number">PROJECT 02</div>
 
 <h3>
-Edge-Stiffened Perforated High-Strength Steel Channels
+Edge-Stiffened Perforated CFS
 </h3>
 
 <p>
-Numerical investigation of perforated and edge-stiffened cold-formed steel
-channel sections, including computational modelling and structural response evaluation.
+Numerical investigation of perforated cold-formed
+steel channel sections, studying structural response
+and buckling behaviour using finite element analysis.
 </p>
 
-<div class="project-tags">
-<span>ABAQUS</span>
-<span>CFS</span>
-<span>Buckling</span>
-<span>Structural Analysis</span>
+<div class="project-tech">
+ABAQUS · CUFSM · BUCKLING ANALYSIS
 </div>
 
 </div>
 
+</div>
 
-<div class="project-card">
 
-<div class="project-number">03 / STRUCTURAL COMPUTING</div>
+<!-- PROJECT 3 -->
+
+<div class="project">
+
+<div class="project-image">
+    <!-- ADD IMAGE HERE -->
+</div>
+
+<div class="project-content">
+
+<div class="project-number">PROJECT 03</div>
 
 <h3>
-Direct Stiffness Method using Python
+Concrete Strength Prediction using ML
 </h3>
 
 <p>
-Developed a Python-based Direct Stiffness Method solver with a GUI for
-2D plane frames, including NumPy-based stiffness assembly and DOF mapping.
-Results were validated against STAAD.Pro.
+Developed a machine-learning workflow for predicting
+concrete compressive strength from mix proportions and
+age, including preprocessing, normalization and model
+evaluation.
 </p>
 
-<div class="project-tags">
-<span>Python</span>
-<span>NumPy</span>
-<span>Matrix Methods</span>
-<span>STAAD.Pro</span>
+<div class="project-tech">
+PYTHON · TENSORFLOW · KERAS · MACHINE LEARNING
 </div>
 
 </div>
 
+</div>
 
-<div class="project-card">
 
-<div class="project-number">04 / BIM & DIGITAL CONSTRUCTION</div>
+<!-- PROJECT 4 -->
+
+<div class="project">
+
+<div class="project-image">
+    <!-- ADD IMAGE HERE -->
+</div>
+
+<div class="project-content">
+
+<div class="project-number">PROJECT 04</div>
 
 <h3>
-5D BIM Modelling & Construction Planning
+Design Cost Optimization
 </h3>
 
 <p>
-Developed a 10-storey Autodesk Revit BIM model and integrated 5D BIM workflows
-for quantity takeoff, cost estimation, and construction scheduling using Dynamo.
+Explored computational approaches for structural design
+and cost optimization, connecting engineering constraints
+with algorithmic search and data-driven decision making.
 </p>
 
-<div class="project-tags">
-<span>Revit</span>
-<span>Dynamo</span>
-<span>BIM</span>
-<span>5D BIM</span>
+<div class="project-tech">
+PYTHON · OPTIMIZATION · STRUCTURAL DESIGN
 </div>
 
 </div>
 
+</div>
 
-<div class="project-card">
 
-<div class="project-number">05 / MACHINE LEARNING</div>
+<!-- PROJECT 5 -->
+
+<div class="project">
+
+<div class="project-image">
+    <!-- ADD IMAGE HERE -->
+</div>
+
+<div class="project-content">
+
+<div class="project-number">PROJECT 05</div>
 
 <h3>
-Concrete Strength Prediction using ANN
+Direct Stiffness Structural Analysis
 </h3>
 
 <p>
-Developed TensorFlow/Keras artificial neural network models to predict
-concrete compressive strength from mix proportions and age, evaluating
-different architectures, activation functions, and optimizers.
+Developed a Python-based Direct Stiffness Method solver
+with a graphical interface for analysis of 2D plane frames
+and validation against STAAD Pro.
 </p>
 
-<div class="project-tags">
-<span>Python</span>
-<span>TensorFlow</span>
-<span>Keras</span>
-<span>ANN</span>
+<div class="project-tech">
+PYTHON · NUMPY · STRUCTURAL ANALYSIS
 </div>
 
 </div>
 
+</div>
 
-<div class="project-card">
 
-<div class="project-number">06 / ML & ENGINEERING DESIGN</div>
+<!-- PROJECT 6 -->
+
+<div class="project">
+
+<div class="project-image">
+    <!-- ADD IMAGE HERE -->
+</div>
+
+<div class="project-content">
+
+<div class="project-number">PROJECT 06</div>
 
 <h3>
-Machine Learning for Engineering Design & Optimization
+5D BIM & Construction Planning
 </h3>
 
 <p>
-Explored data-driven modelling approaches for engineering design,
-prediction, and optimisation, connecting machine-learning workflows
-with structural engineering applications.
+Developed a 10-storey Autodesk Revit BIM model and
+integrated 5D BIM workflows for quantity takeoff,
+cost estimation and scheduling.
 </p>
 
-<div class="project-tags">
-<span>Machine Learning</span>
-<span>Python</span>
-<span>Data Analysis</span>
-<span>Optimization</span>
+<div class="project-tech">
+REVIT · DYNAMO · BIM · CONSTRUCTION PLANNING
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-header">
+
+<div>
+<div class="section-number">04 / EXPERIENCE</div>
+<div class="section-title">Where I have worked.</div>
 </div>
 
 </div>
 
 
-<div class="project-card">
+<div class="timeline">
 
-<div class="project-number">07 / STRUCTURAL DESIGN</div>
 
-<h3>
-Steel Roof Structure of a Land Port Building
-</h3>
+<div class="timeline-item">
+
+<div class="timeline-date">
+JUNE 2026 — PRESENT
+</div>
+
+<h3>Research Intern · NUS Singapore</h3>
+
+<h4>Prof. Meng Xin</h4>
 
 <p>
-Designed and analysed a 72 m × 50 m steel roof structure with trusses,
-purlins, and bracing, considering dead, live, wind, and seismic loads.
+Working on geometric imperfection modelling of Circular
+Hollow Sections using mathematical formulations and
+computational structural analysis. Developing Python
+automation for finite element modelling and extending
+the computational framework towards additive-manufactured
+materials.
 </p>
 
-<div class="project-tags">
-<span>STAAD.Pro</span>
-<span>IS 800</span>
-<span>IS 875</span>
-<span>Steel Design</span>
-</div>
-
 </div>
 
 
-<div class="project-card">
+<div class="timeline-item">
 
-<div class="project-number">08 / DATA SCIENCE</div>
+<div class="timeline-date">
+MAY 2025 — JULY 2025
+</div>
 
-<h3>
-Stock Price Forecasting
-</h3>
+<h3>Research Intern · IIT Bombay</h3>
+
+<h4>Dr. Tushar Kanti Mandal</h4>
 
 <p>
-Developed a machine-learning based stock forecasting system using
-multiple regression and ensemble approaches, including KNN, SVM,
-Decision Tree, Random Forest, MLP, and LSTM.
+Conducted a short-term computational study as part of
+a planned project with ISRO. Developed nonlinear finite
+element models of bolted joints and automated post-
+processing using Python to investigate fatigue and
+anti-loosening behaviour.
 </p>
-
-<div class="project-tags">
-<span>Python</span>
-<span>ML</span>
-<span>LSTM</span>
-<span>Data Science</span>
-</div>
 
 </div>
 
@@ -1289,34 +1277,52 @@ Decision Tree, Random Forest, MLP, and LSTM.
 </section>
 
 
-<!-- =========================
-     PUBLICATION
-========================= -->
+<!-- PUBLICATION -->
 
-<section id="publication">
+<section id="publication" class="publication">
 
 <div class="container">
 
-<div class="section-heading">
-<div class="section-number">04 — PUBLICATION & CONFERENCE</div>
-<h2>Research communication.</h2>
+<div class="section-header">
+
+<div>
+<div class="section-number">05 / PUBLICATION</div>
+<div class="section-title">Research shared beyond the lab.</div>
+</div>
+
 </div>
 
 
-<div class="publication">
+<div class="paper">
+
+<div class="paper-label">
+CONFERENCE PAPER
+</div>
+
+<div>
 
 <h3>
-Numerical Modelling and Design of Edge-Stiffened Perforated High-Strength Steel Channel Columns
+Numerical Modelling and Design of Edge-Stiffened
+Perforated High-Strength Steel Channel Columns
 </h3>
 
 <p>
-Research on numerical modelling and design of edge-stiffened perforated
-high-strength steel channel columns.
+10th International Congress on Computational Mechanics
+and Simulation (ICCMS 2025), IIT Bhubaneswar, India.
 </p>
 
-<div class="publication-meta">
-Presented at the 10th International Congress on Computational Mechanics
-and Simulation (ICCMS 2025) · IIT Bhubaneswar · December 2025
+<p>
+Research on the numerical modelling and design behaviour
+of edge-stiffened perforated high-strength cold-formed
+steel channel columns.
+</p>
+
+<!-- REPLACE # WITH YOUR PAPER / CONFERENCE LINK -->
+
+<a href="#" target="_blank">
+View publication / presentation ↗
+</a>
+
 </div>
 
 </div>
@@ -1326,87 +1332,92 @@ and Simulation (ICCMS 2025) · IIT Bhubaneswar · December 2025
 </section>
 
 
-<!-- =========================
-     SKILLS
-========================= -->
+<!-- TECHNICAL SKILLS -->
 
-<section id="skills" class="section-light">
+<section>
 
 <div class="container">
 
-<div class="section-heading">
-<div class="section-number">05 — TECHNICAL SKILLS</div>
-<h2>Tools I work with.</h2>
+<div class="section-header">
+
+<div>
+<div class="section-number">06 / TOOLKIT</div>
+<div class="section-title">Engineering, computation & design.</div>
+</div>
+
 </div>
 
 
 <div class="skills-grid">
 
-<div class="skill-box">
+<div class="skill-card">
 
 <h3>Structural Engineering</h3>
 
 <p>
-Structural Analysis · Reinforced Concrete Design · Steel Structures ·
-Cold-Formed Steel · Structural Dynamics · Buckling Analysis
+Structural Analysis · Reinforced Concrete Design ·
+Steel Structures · Structural Dynamics · Buckling
+Analysis · Cold-Formed Steel
 </p>
 
 </div>
 
 
-<div class="skill-box">
+<div class="skill-card">
 
-<h3>Finite Element Analysis</h3>
+<h3>Computational Mechanics</h3>
 
 <p>
-ABAQUS · Nonlinear Analysis · Contact Modelling · Static Riks Analysis ·
-Finite Element Modelling · Post-processing
+ABAQUS · Finite Element Analysis · Nonlinear Analysis ·
+Riks Analysis · Contact Modelling · CUFSM
 </p>
 
 </div>
 
 
-<div class="skill-box">
+<div class="skill-card">
+
+<h3>Programming & Data</h3>
+
+<p>
+Python · MATLAB · C++ · NumPy · Pandas ·
+Machine Learning · Data Analysis · Optimization
+</p>
+
+</div>
+
+
+<div class="skill-card">
 
 <h3>Engineering Software</h3>
 
 <p>
-ETABS · STAAD.Pro · MIDAS · CUFSM · Autodesk Revit · Dynamo ·
-3D Scanning
+ETABS · STAAD Pro · Autodesk Revit · MIDAS ·
+Dynamo
 </p>
 
 </div>
 
 
-<div class="skill-box">
+<div class="skill-card">
 
-<h3>Programming</h3>
+<h3>Design & BIM</h3>
 
 <p>
-Python · MATLAB · C++ · NumPy · Pandas · Matplotlib
+BIM · 5D BIM · Quantity Takeoff · Cost Estimation ·
+Construction Planning
 </p>
 
 </div>
 
 
-<div class="skill-box">
-
-<h3>Machine Learning</h3>
-
-<p>
-TensorFlow · Keras · Regression · Neural Networks · Data Preprocessing ·
-Model Evaluation · Engineering ML
-</p>
-
-</div>
-
-
-<div class="skill-box">
+<div class="skill-card">
 
 <h3>Standards</h3>
 
 <p>
-IS 456:2000 · IS 800:2007 · IS 875 · Cold-Formed Steel Design
+IS 456 · IS 800 · IS 875 · Structural Design Codes
+and Computational Modelling Standards
 </p>
 
 </div>
@@ -1418,90 +1429,54 @@ IS 456:2000 · IS 800:2007 · IS 875 · Cold-Formed Steel Design
 </section>
 
 
-<!-- =========================
-     LEADERSHIP
-========================= -->
+<!-- SOCIAL CONTRIBUTION -->
 
-<section id="leadership">
+<section class="social">
 
 <div class="container">
 
-<div class="section-heading">
-<div class="section-number">06 — LEADERSHIP & SOCIAL IMPACT</div>
-<h2>Beyond engineering.</h2>
-<p>
-Leadership, outreach, music, event management, and community contribution.
-</p>
+<div class="section-header">
+
+<div>
+<div class="section-number">07 / BEYOND ENGINEERING</div>
+<div class="section-title">Engineering is also about people.</div>
 </div>
-
-
-<div class="leadership-grid">
-
-
-<div class="leadership-card">
-
-<h3>Sangam — Music Society, IIT Jodhpur</h3>
-
-<div class="role">
-Core Member · Lead Female Singer
-</div>
-
-<p>
-Contributed to musical performances and participated in organising
-activities and events as part of the institute's music society.
-</p>
 
 </div>
 
 
-<div class="leadership-card">
+<div class="social-grid">
 
-<h3>IGNUS'25 — IIT Jodhpur</h3>
-
-<div class="role">
-Assistant Head — Marketing
+<div class="social-photo">
+    <!-- ADD INNER WHEEL PHOTO HERE -->
 </div>
+
+
+<div class="social-text">
+
+<div class="social-role">
+VOLUNTEER · INNER WHEEL CLUB
+</div>
+
+<h3>
+Contributing beyond the classroom.
+</h3>
 
 <p>
-Coordinated with companies and external organisations to establish
-partnerships and secure sponsorships for the institute's annual cultural festival.
+Contributed as a volunteer with Inner Wheel International,
+supporting initiatives focused on women's empowerment,
+environmental sustainability, community health and
+literacy.
 </p>
 
-</div>
-
-
-<div class="leadership-card">
-
-<h3>Inner Wheel International</h3>
-
-<div class="role">
-Volunteer · Social Contribution
-</div>
-
-<p>
-Contributed to women’s empowerment, environmental sustainability,
-community health, and literacy initiatives through volunteer outreach
-and welfare activities.
+<p style="margin-top:16px;">
+Through outreach and community welfare activities,
+the experience strengthened my appreciation for the
+role of engineering and education in creating more
+inclusive and sustainable communities.
 </p>
 
 </div>
-
-
-<div class="leadership-card">
-
-<h3>Engineering & Community</h3>
-
-<div class="role">
-Interdisciplinary Perspective
-</div>
-
-<p>
-Interested in applying engineering, computation, and data-driven thinking
-to problems with practical and societal impact.
-</p>
-
-</div>
-
 
 </div>
 
@@ -1510,79 +1485,40 @@ to problems with practical and societal impact.
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
 <div class="container">
 
-<div class="section-heading">
-
-<div class="section-number">07 — CONTACT</div>
-
-<h2>Let's connect.</h2>
-
-<p>
-For research collaborations, academic opportunities, structural engineering,
-computational mechanics, or simply to discuss interesting engineering problems.
-</p>
-
+<div class="section-number">
+08 / CONTACT
 </div>
 
+<h2>
+Let's build something meaningful.
+</h2>
 
-<div class="contact-grid">
+<p>
+I am interested in structural engineering, computational
+mechanics, numerical modelling and research-driven
+engineering problems.
+</p>
 
 
 <div class="contact-links">
 
-<a class="contact-link"
-href="mailto:sejalyenage7@gmail.com">
-✉ &nbsp; sejalyenage7@gmail.com
+<a href="mailto:sejalyenage7@gmail.com">
+Email ↗
 </a>
 
-<a class="contact-link"
-href="tel:+918446136242">
-☎ &nbsp; +91 84461 36242
+<a href="https://github.com/sejal-010605" target="_blank">
+GitHub ↗
 </a>
 
-<a class="contact-link"
-href="https://www.linkedin.com/in/sejalvy2407"
-target="_blank">
-in &nbsp; LinkedIn
+<a href="https://www.linkedin.com/in/sejalyv2407/" target="_blank">
+LinkedIn ↗
 </a>
-
-<a class="contact-link"
-href="https://github.com/sejal-010605"
-target="_blank">
-⌘ &nbsp; GitHub
-</a>
-
-</div>
-
-
-<div class="contact-message">
-
-<h3>
-Civil & Infrastructure Engineering
-</h3>
-
-<p>
-Indian Institute of Technology Jodhpur<br>
-B.Tech · 2023 — 2027
-</p>
-
-<br>
-
-<a class="btn btn-secondary"
-href="https://drive.google.com/drive/folders/1mr2sCRDO_3aCDy45hHCgnKazdTeKakWw?usp=sharing"
-target="_blank">
-View Portfolio / Documents
-</a>
-
-</div>
-
 
 </div>
 
@@ -1591,15 +1527,15 @@ View Portfolio / Documents
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-<div class="container">
+<div class="container footer-inner">
 
-© 2026 Sejal Yenage · Civil & Infrastructure Engineering · IIT Jodhpur
+<span>© 2026 Sejal Yenage</span>
+
+<span>IIT Jodhpur · Civil & Infrastructure Engineering</span>
 
 </div>
 
