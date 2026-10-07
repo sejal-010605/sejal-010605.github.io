@@ -643,6 +643,8 @@ section{
     object-fit:contain;
     object-position:center;
     display:block;
+}
+.cfs-project-photo .project-photo-inner img{
     transform:scale(1.25);
 }
 .ml-project-photo .project-photo-inner{
@@ -651,7 +653,9 @@ section{
 .structural-analysis-photo .project-photo-inner{
     aspect-ratio:16 / 9;
 }
-
+.ann-project-photo .project-photo-inner{
+    aspect-ratio:1 / 1;
+}
 <!-- =========================
      SKILLS
 ========================= -->
@@ -1758,13 +1762,11 @@ plane-frame structures.
 
 <div class="timeline-image">
 
-<div class="project-photo">
-
-<div class="project-photo-inner">
-ADD ANN / CONCRETE<br>
-VISUAL
-</div>
-
+<div class="project-photo ann-project-photo">
+    <div class="project-photo-inner">
+        <img src="conc.png"
+             alt="Concrete compressive strength prediction using artificial neural networks">
+    </div>
 </div>
 
 </div>
