@@ -511,40 +511,50 @@ section{
     padding:0 5px;
 }
 
-.timeline-content.right{
-    grid-column:3;
-}
-.nus-research{
-    text-align:left;
-}
-
-.nus-research h3,
-.nus-research h4,
-.nus-research p,
-.nus-research ul{
-    text-align:left;
-}
-.timeline-content.left{
+/* ODD ITEMS:
+   Image LEFT | Content RIGHT */
+.timeline-item:nth-child(odd) .timeline-image{
     grid-column:1;
-    text-align:right;
-}
-
-.timeline-image{
-    grid-column:1;
-    grid-row:1;
-}
-
-.left-text-project{
-    text-align:left;
-}
-
-.timeline-item:nth-child(even) .timeline-dot{
-    grid-column:2;
     grid-row:1;
 }
 
 .timeline-item:nth-child(odd) .timeline-content{
     grid-column:3;
+    grid-row:1;
+    text-align:left;
+}
+
+/* EVEN ITEMS:
+   Content LEFT | Image RIGHT */
+.timeline-item:nth-child(even) .timeline-image{
+    grid-column:3;
+    grid-row:1;
+}
+
+.timeline-item:nth-child(even) .timeline-content{
+    grid-column:1;
+    grid-row:1;
+    text-align:left;
+}
+
+/* Centre dot */
+.timeline-item .timeline-dot{
+    grid-column:2;
+    grid-row:1;
+}
+
+/* Keep all project text left-aligned */
+.timeline-content h3,
+.timeline-content h4,
+.timeline-content p,
+.timeline-content ul{
+    text-align:left;
+}
+
+/* Tags follow the content */
+.timeline-item:nth-child(odd) .tags,
+.timeline-item:nth-child(even) .tags{
+    justify-content:flex-start;
 }
 
 .timeline-date{
