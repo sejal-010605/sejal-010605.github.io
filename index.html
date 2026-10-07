@@ -773,7 +773,7 @@ Construction Planning
 ========================= */
 
 .extra{
-    background:var(--navy);
+    background:#17324a;
     color:white;
 }
 
@@ -814,20 +814,20 @@ Construction Planning
 
 .polaroid-gallery{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
     align-items:start;
 }
 
 .polaroid{
     background:#fff;
-    padding:11px 11px 17px;
+    padding:12px 12px 18px;
     box-shadow:0 12px 28px rgba(0,0,0,.14);
     color:var(--navy);
 }
 
 .polaroid:nth-child(2){
-    margin-top:45px;
+    margin-top:35px;
     transform:rotate(2deg);
 }
 
@@ -836,20 +836,26 @@ Construction Planning
 }
 
 .polaroid-image{
-    height:210px;
-    background:#e7e4dc;
+    height:255px;
+    background:#f1efe8;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#888277;
-    font-size:10px;
-    letter-spacing:2px;
+    overflow:hidden;
+}
+
+.polaroid-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
 
 .polaroid-caption{
-    padding:12px 5px 0;
+    padding:13px 5px 0;
     font-family:"Playfair Display",serif;
     font-size:14px;
+    line-height:1.35;
 }
 
 /* =========================
@@ -2163,28 +2169,15 @@ support festival outreach.
 <!-- POLAROIDS -->
 
 <div class="polaroid-gallery">
-
 <div class="polaroid">
 
 <div class="polaroid-image">
-ADD MUSIC PHOTO
+<img src="music1.png"
+     alt="Classical Singing certificate">
 </div>
 
 <div class="polaroid-caption">
-Sangam · Music Society
-</div>
-
-</div>
-
-
-<div class="polaroid">
-
-<div class="polaroid-image">
-ADD INNER WHEEL PHOTO
-</div>
-
-<div class="polaroid-caption">
-Inner Wheel · Community Outreach
+Classical Singing · 2017
 </div>
 
 </div>
@@ -2193,11 +2186,12 @@ Inner Wheel · Community Outreach
 <div class="polaroid">
 
 <div class="polaroid-image">
-ADD IGNUS PHOTO
+<img src="music2.png"
+     alt="Classical Singing certificate">
 </div>
 
 <div class="polaroid-caption">
-IGNUS'25 · Sponsorship & Outreach
+Classical Singing · 2018
 </div>
 
 </div>
@@ -2206,14 +2200,16 @@ IGNUS'25 · Sponsorship & Outreach
 <div class="polaroid">
 
 <div class="polaroid-image">
-ADD ADDITIONAL PHOTO
+<img src="inner_wheel_.png"
+     alt="Inner Wheel Certificate of Appreciation">
 </div>
 
 <div class="polaroid-caption">
-IIT Jodhpur · Beyond Engineering
+Inner Wheel · Community Service · 2024
 </div>
 
 </div>
+
 
 </div>
 
