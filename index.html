@@ -1054,8 +1054,57 @@ footer{
     }
 
 }
+/* =========================
+   TECHNICAL SKILLS
+========================= */
+
 #skills{
     padding-top:50px;
+    padding-bottom:75px;
+}
+
+.skills-list{
+    margin-top:45px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.skill-row{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    align-items:center;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+}
+
+.skill-category{
+    font-size:16px;
+    font-weight:700;
+    color:var(--navy);
+}
+
+.skill-content{
+    font-size:14px;
+    color:#566572;
+    line-height:1.6;
+    padding-left:30px;
+    border-left:1px solid var(--line);
+}
+
+@media(max-width:900px){
+
+    .skill-row{
+        grid-template-columns:1fr;
+        gap:8px;
+    }
+
+    .skill-content{
+        padding-left:0;
+        border-left:none;
+    }
+
 }
 </style>
 </head>
@@ -1969,8 +2018,9 @@ integrating construction scheduling and cost planning.
 
 
 <!-- =========================
-     SKILLS
+     TECHNICAL SKILLS
 ========================= -->
+
 <section id="skills">
 
 <div class="container">
@@ -1982,67 +2032,58 @@ Technical Skills
 </h2>
 
 <p class="section-intro">
-Tools, programming languages, engineering standards and professional skills.
+Tools for modelling, analysis and computation.
 </p>
 
-<div class="skills-layout">
+<div class="skills-list">
 
-<div>
+<div class="skill-row">
 
-<div class="skill-group">
-
-<h3>
+<div class="skill-category">
 Software & Tools
-</h3>
+</div>
 
-<div class="skill-list">
+<div class="skill-content">
 STAAD.Pro · ABAQUS · ETABS · Autodesk Revit · 3D Scanning · AutoCAD · SolidWorks · CUFSM
 </div>
 
 </div>
 
 
-<div class="skill-group">
+<div class="skill-row">
 
-<h3>
+<div class="skill-category">
 Programming
-</h3>
+</div>
 
-<div class="skill-list">
+<div class="skill-content">
 C · C++ · Python (Pandas · Keras · Scikit-learn · NumPy · Matplotlib · PyTorch · TensorFlow) · LaTeX · MATLAB
 </div>
 
 </div>
 
-</div>
 
+<div class="skill-row">
 
-<div>
-
-<div class="skill-group">
-
-<h3>
+<div class="skill-category">
 Codes & Standards
-</h3>
+</div>
 
-<div class="skill-list">
-IS 456:2000 · IS 800:2007 · AISI S100 · Eurocode 3<br>
-Structural Design · Cold-Formed Steel
+<div class="skill-content">
+IS 456:2000 · IS 800:2007 · AISI S100 · Eurocode 3 · Structural Design · Cold-Formed Steel
 </div>
 
 </div>
 
 
-<div class="skill-group">
+<div class="skill-row">
 
-<h3>
+<div class="skill-category">
 Soft Skills
-</h3>
-
-<div class="skill-list">
-Communication · Analytical Thinking · Teamwork · Leadership
 </div>
 
+<div class="skill-content">
+Communication · Analytical Thinking · Teamwork · Leadership
 </div>
 
 </div>
