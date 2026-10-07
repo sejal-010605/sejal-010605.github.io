@@ -534,15 +534,16 @@ section{
     grid-row:1;
 }
 
-.timeline-item:nth-child(even) .timeline-image{
-    grid-column:3;
+.timeline-item:nth-child(even) .timeline-content{
+    grid-column:1;
     grid-row:1;
+    text-align:left;
 }
 
 .timeline-item:nth-child(even) .timeline-content{
     grid-column:1;
     grid-row:1;
-    text-align:right;
+    text-align:left;
 }
 
 .timeline-item:nth-child(even) .timeline-dot{
@@ -644,7 +645,10 @@ section{
 .ml-project-photo .project-photo-inner{
     aspect-ratio:1 / 1;
 }
-
+.structural-analysis-photo .project-photo-inner{
+    aspect-ratio:16 / 9;
+}
+    
 <!-- =========================
      SKILLS
 ========================= -->
@@ -1687,11 +1691,11 @@ Achieved R² = 0.99994 with CatBoost, reducing the optimization search space by 
 
 <div class="project-photo">
 
-<div class="project-photo-inner">
-ADD STRUCTURAL ANALYSIS<br>
-VISUAL / GUI
-</div>
-
+<div class="project-photo structural-analysis-photo">
+    <div class="project-photo-inner">
+        <img src="structural_analysis.png"
+             alt="Python-based Direct Stiffness Method structural analysis software">
+    </div>
 </div>
 
 </div>
