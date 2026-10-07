@@ -612,19 +612,24 @@ section{
     background:#eeeae2;
     border:1px solid #d8d5cd;
     padding:12px;
-    min-height:310px;
+    width:100%;
 }
 
 .project-photo-inner{
-    height:285px;
+    width:100%;
+    aspect-ratio:3 / 4;
     background:#e3dfd5;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#8c877d;
-    font-size:11px;
-    letter-spacing:2px;
-    text-align:center;
+    overflow:hidden;
+}
+
+.project-photo-inner img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
 
 
@@ -1465,8 +1470,8 @@ and finite-element modelling to data-driven structural design.
 <div class="project-photo">
 
 <div class="project-photo-inner">
-ADD JOURNAL / ABAQUS<br>
-PROJECT IMAGE
+    <img src="HSS_Csection.tif"
+         alt="ABAQUS buckling analysis of perforated cold-formed steel channel column">
 </div>
 
 </div>
